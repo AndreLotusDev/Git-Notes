@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Tuesday, July 16th 2024, 7:07:51 pm
-date modified: Monday, August 5th 2024, 10:52:05 pm
+date modified: Tuesday, August 6th 2024, 11:05:49 am
 ---
 Commits são checkpoints de seu projeto, onde o seu projeto é versionado propriamente.
 
