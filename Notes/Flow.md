@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Wednesday, August 7th 2024, 11:26:51 pm
-date modified: Wednesday, August 7th 2024, 11:28:42 pm
+date modified: Thursday, August 8th 2024, 11:35:34 pm
 ---
 # Adicionar ao git ignore e remover de forma retroativa
 
