@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Tuesday, August 6th 2024, 11:08:48 am
-date modified: Tuesday, August 6th 2024, 11:49:16 am
+date modified: Friday, August 16th 2024, 12:48:05 am
 ---
 git branch - lista todas as branches
 
@@ -21,3 +21,23 @@ git switch <branch_name> - faz o mesmo que o git checkout em termos de navegaç�
 git switch -c <branch_name> - cria uma branch com o nome especificado e depois da switch nela
 
 git commit -a -m "<commit_message>" - jeito de flow único de commitar já tudo e adicionar uma mensagem
+
+git diff- analisa os arquivos alterados e mostra a versão previa do HEAD em comparação com a versão atual dos arquivos modificados.
+
+git diff HEAD - mostra a diferença entre todos os arquivos desde o último commit (incluindo arquivos dentro do staging)
+
+git diff --stage/git diff --cached - Ambos os commandos fazem a mesma coisa e mostra a diferença do último commit para com as mudanças que estão em preparação.
+
+git diff HEAD <NOME_DO_ARQUIVO> - Visualiza a diferença do arquivo para o último commit, muito útil para quando seu trabalho na branch e trabalho não commitado tem muitos files, linhas de alteração, ai focamos na diferença de somente um arquivo para não atrapalhar na visualização.
+
+git diff <NOME_DA_BRANCH> <NOME_DA_SEGUNDA_BRANCH> - Compara a diferença entre as branches.
+	git diff <NOME_DA_BRANCH> <NOME_DA_SEGUNDA_BRANCH>~1 - Compara as diferenças da branch 1 com a segunda em 1 commit anterior
+	git diff --name-only <NOME_DA_BRANCH> <NOME_DA_SEGUNDA_BRANCH> - Mostra somente a lista de arquivos que são diferentes entre as branches
+	git diff --stat <NOME_DA_BRANCH> <NOME_DA_SEGUNDA_BRANCH> - Mostra somente os status dentro dos arquivos (numeros de linhas modificadas, atualizadas e deletadas)
+
+git diff a1b2c3d e4f5g6h - Compara a diferença entre dois commits
+git diff HEAD HEAD~2 - Compara o estado atual com dois commits anteriores
+
+git stash | git stash save - Pega todos os arquivos staged e unstaged e movem para o stash
+
+git stash pop - Remove os items do stash e coloca novamente na branch atual
