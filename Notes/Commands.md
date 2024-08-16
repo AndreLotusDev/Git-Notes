@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Tuesday, August 6th 2024, 11:08:48 am
-date modified: Friday, August 16th 2024, 12:48:05 am
+date modified: Friday, August 16th 2024, 1:10:55 am
 ---
 git branch - lista todas as branches
 
@@ -41,3 +41,15 @@ git diff HEAD HEAD~2 - Compara o estado atual com dois commits anteriores
 git stash | git stash save - Pega todos os arquivos staged e unstaged e movem para o stash
 
 git stash pop - Remove os items do stash e coloca novamente na branch atual
+
+git stash apply - Coloca o conteudo do stash dentro da branch atual sem de fato deletar essas coisas do stash, muito útil para quando é necessario aplicar o stash em multiplas branches ao mesmo tempo.
+
+git stash list - Lista todos os stashs que fiz no repositorio e ainda continuam ativos.
+
+git stash apply stash@{2} - Remove o segundo stash da stack
+
+git stash push -m "Your message" - Cria um stash com uma mensagem customizada em vez da default.
+
+git stash drop stash@{2} - Dropa o stash em especifico da pilha de stashs
+
+git stash clear - Remove todos os stashs de uma vez só, cuidado pois esse commando não tem desfazer (undo).
