@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Tuesday, August 6th 2024, 11:08:48 am
-date modified: Sunday, August 18th 2024, 10:04:30 pm
+date modified: Sunday, August 18th 2024, 10:23:52 pm
 ---
 git branch - lista todas as branches
 
@@ -59,3 +59,8 @@ git restore - Desfaz as alterações dos arquivos aos quais não estão commitad
 git restore --source HEAD~1 app.js - Restora a versão do arquivo para a versão dettachada do HEAD se for necessário, como por exemplo no HEAD~1 ao qual restora o arquivo app.js para um commit anterior. Você também pode usar o commit hash como ponto de navegação.
 
 git restore --staged <NOME_DO_ARQUIVO> - Move o arquivo do ambiente stage para o ambiente de não comitado. Muito útil para quando você adiciona um arquivo pro stage sem querer, geralmente usamos muito esse commando pela GUI/UI.
+
+git reset <COMMIT> - Ira desfazer o commit, e todos os arquivos tocados por esse commit ficarão em stage para voce modificar ou adicionar em outro commit.
+
+git reset --hard <COMMIT> - Ira desfazer as alterações e descartar os arquivos alterados pelos commits navegados, por exemplo.
+	git reset --hard HEAD~2 - Irá desfazer os dois commits, navegar para dois commits atrás e ainda descartar todos os arquivos tocados por esses últimos dois commits.
