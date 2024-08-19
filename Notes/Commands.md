@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Tuesday, August 6th 2024, 11:08:48 am
-date modified: Friday, August 16th 2024, 1:10:55 am
+date modified: Sunday, August 18th 2024, 10:04:30 pm
 ---
 git branch - lista todas as branches
 
@@ -53,3 +53,9 @@ git stash push -m "Your message" - Cria um stash com uma mensagem customizada em
 git stash drop stash@{2} - Dropa o stash em especifico da pilha de stashs
 
 git stash clear - Remove todos os stashs de uma vez só, cuidado pois esse commando não tem desfazer (undo).
+
+git restore - Desfaz as alterações dos arquivos aos quais não estão commitadas, cuidado, pois este commando não tem CTRL Z portando o descarte das alterações são permanentes.
+
+git restore --source HEAD~1 app.js - Restora a versão do arquivo para a versão dettachada do HEAD se for necessário, como por exemplo no HEAD~1 ao qual restora o arquivo app.js para um commit anterior. Você também pode usar o commit hash como ponto de navegação.
+
+git restore --staged <NOME_DO_ARQUIVO> - Move o arquivo do ambiente stage para o ambiente de não comitado. Muito útil para quando você adiciona um arquivo pro stage sem querer, geralmente usamos muito esse commando pela GUI/UI.
