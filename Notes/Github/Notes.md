@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Sunday, August 18th 2024, 10:47:15 pm
-date modified: Thursday, August 22nd 2024, 8:48:25 pm
+date modified: Thursday, August 22nd 2024, 10:30:11 pm
 ---
 O github não é git, github é uma plataforma open source, onde você pode criar repositórios de código aberto e privado, e com isso pode iniciar desenvolvimento de código colaborativo.
 
@@ -22,6 +22,10 @@ Além do cenário colaborativo, o github por oferecer um servidor em cloud para 
 Quando clonamos algo do github, temos a branch main e origin/master, temos essa diferenciação por duas branches para que sabemos onde estamos na master localmente e onde estamos na master de forma remota, isso se da pois fazemos alterações localmente que podem se descompassar com a branch remota, por isso temos esses dois tipos de visualização.
 
 Como eu disse acima, há uma diferenciação entre o remoto e o local, portanto você pode dar checkout entre a branch remota e a branch local, para navegar remotamente basta, dar um checkout no estilo origin/master, fazendo isso, indiferente do que você tenha localmente você vai acessar a master de forma remota. Isso é muito útil para quando você efetua commits na mesma branch localmente mas quer verificar como ela está de forma remota.
+
+Quando voce clona o projeto remotamente, a priori se o projeto tiver mais de uma branch, voce comeca o projeto provavelmente com a master e a main clonada, todavia as branches adicionais não vem em conjunto, e requerem que voce faça o checkout delas remotamente.
+
+Para se navegar para uma branch remota ao qual queremos ter localmente, basta se ter o nome dela e executar o commando git switch <BRANC_DESEJADA>, e ele automaticamente vai ver se existe uma branch remota, e caso positivo ele se conecta come ela.
 
 ---
 

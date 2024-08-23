@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Tuesday, August 6th 2024, 11:08:48 am
-date modified: Monday, August 19th 2024, 12:57:22 am
+date modified: Thursday, August 22nd 2024, 11:06:12 pm
 ---
 git branch - lista todas as branches.
 
@@ -87,3 +87,10 @@ git push <NOME_REMOTO> <BRANCH> - Empurra as atualizações feitas na branch loc
 git push origin <BRANCH_A>:<BRANCH_B> - Empurra modificações da branch BRANCH_A para a BRANCH_B, é um commando exotico que pode levar a confusão, mas fica de exemplo para caso você precise empurrar coisas de uma branch A para branch B.
 
 git push -u origin main:main - configura que agora as atualizações locais da main vai set empurrada remotamente para a main, e também configura para futuramente qualquer git push efetuado na branch main já seja feito sabendo que é na URL que aponta dentro da origin, não sendo mais necessário efetuar o commando com os flags parametrizadas de forma mais extensa.
+
+git fetch <NOME_DA_BRANCH> - Pega e notifica localmente todas as disparidades e o que falta na branch local para ficar syncada com a branch remota.
+
+git fetch origin - Pega e resolve a URL parametrizada de origin e ve remotamente tudo que ha de disparidade remotamente com suas branches local e notifica para voce o que falta para ambos ambientes ficarem syncados.
+
+git pull - Puxa as diferencas e o que falta para ficar syncado o repositorio local com o remoto, o pull as vezes pode falhar caso as diferencas locais sejam conflitates com as que vem remotamente, exigindo um merge manual do conflito.
+	git pull remote <BRANCH_EM_ESPECIFICO> - Puxa as atualizacoes remota de uma branch especifica (nao necessariamente a atual que voce está).
