@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Tuesday, August 6th 2024, 11:08:48 am
-date modified: Thursday, August 22nd 2024, 11:06:12 pm
+date modified: Friday, August 23rd 2024, 4:11:39 pm
 ---
 git branch - lista todas as branches.
 
@@ -17,6 +17,7 @@ git checkout <branch_name> - navega para uma branch, caso não exista ele cria e
 priori, também pode restaurar arquivos.
 
 git switch <branch_name> - faz o mesmo que o git checkout em termos de navegação de branches, todavia por set um commando mais moderno veio com o intuito de fazer somente uma coisa em contraste com o checkout que faz várias coisas.
+	git switch - -> volta para a branch anterior que ele estava.
 
 git switch -c <branch_name> - cria uma branch com o nome especificado e depois da switch nela.
 
