@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Tuesday, August 6th 2024, 11:08:48 am
-date modified: Friday, August 23rd 2024, 4:11:39 pm
+date modified: Saturday, August 24th 2024, 12:26:57 am
 ---
 git branch - lista todas as branches.
 
@@ -95,3 +95,7 @@ git fetch origin - Pega e resolve a URL parametrizada de origin e ve remotamente
 
 git pull - Puxa as diferencas e o que falta para ficar syncado o repositorio local com o remoto, o pull as vezes pode falhar caso as diferencas locais sejam conflitates com as que vem remotamente, exigindo um merge manual do conflito.
 	git pull remote <BRANCH_EM_ESPECIFICO> - Puxa as atualizacoes remota de uma branch especifica (nao necessariamente a atual que voce está).
+
+git merge <NOME_DA_BRANCH> - Pega o nome da branch e traz as coisas dela que nao tem na branch atual e joga dentro da branch atual.
+
+git rebase <NOME_DA_BRANCH> - Se voce estiver na branch feature, ele vai analisar o NOME_DA_BRANCH, e reescrever o commit da branch feature no top da NOME_DA_BRANCH e aplicar na branch feature, organizando assim o historico de commits na branch feature.
