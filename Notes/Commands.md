@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Tuesday, August 6th 2024, 11:08:48 am
-date modified: Saturday, August 24th 2024, 12:26:57 am
+date modified: Saturday, August 24th 2024, 1:51:50 am
 ---
 git branch - lista todas as branches.
 
@@ -97,5 +97,9 @@ git pull - Puxa as diferencas e o que falta para ficar syncado o repositorio loc
 	git pull remote <BRANCH_EM_ESPECIFICO> - Puxa as atualizacoes remota de uma branch especifica (nao necessariamente a atual que voce está).
 
 git merge <NOME_DA_BRANCH> - Pega o nome da branch e traz as coisas dela que nao tem na branch atual e joga dentro da branch atual.
+	git merge --ff-only feature - Produz um merge sem criar uma mensagem de commit, mas sao poucas as situacoes ao qual isso realmente é possível.
+	git merge --no-commit feature - Mesma situacao, todavia ele pausa o processo de commit, e se for necessario criar uma mensagem de commit ele vai te perguntar como voce quer fazer essa mensagem de commit.
 
 git rebase <NOME_DA_BRANCH> - Se voce estiver na branch feature, ele vai analisar o NOME_DA_BRANCH, e reescrever o commit da branch feature no top da NOME_DA_BRANCH e aplicar na branch feature, organizando assim o historico de commits na branch feature.
+	git rebase --continue - Necessario quando estamos no fluxo de resolucao de conflitos, excecutamos ele para sinalizar para o git que resolvemos o conflito e que ele pode prosseguir reescrevendo o historico de commits.
+	git rebase -i HEAD~4 - Reescreve quatro commits atras de forma iterativa.

@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Friday, August 23rd 2024, 8:45:57 pm
-date modified: Friday, August 23rd 2024, 11:55:19 pm
+date modified: Saturday, August 24th 2024, 1:57:28 am
 ---
 Geralmente é muito se debatido quando ou não usar, todavia o certo não seria colocar uma regra generalizada, mas sim analisar cada situação e saber quando usar no memento correto.
 
@@ -30,3 +30,14 @@ Contras de usar rebase:
 ---
 
 Pros de usar rebase:
+
+---
+
+O rebase também pode set utilizado interativamente para reescrever o historico de 10, 50, 100 commits atrás.
+
+Por exemplo: ao executar
+	git rebase -i HEAD~9 - Falamos para observar os ultimos 9 commit e comecar o processo de re estruturacao.
+
+Depois que voce executa o git rebase é aberto um editor perguntando o que voce quer fazer exclusivamente com cada commit, as opcoes sao:
+
+![[Pasted image 20240824015659.png]]
