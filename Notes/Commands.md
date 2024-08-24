@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Tuesday, August 6th 2024, 11:08:48 am
-date modified: Saturday, August 24th 2024, 1:51:50 am
+date modified: Saturday, August 24th 2024, 2:38:54 pm
 ---
 git branch - lista todas as branches.
 
@@ -103,3 +103,22 @@ git merge <NOME_DA_BRANCH> - Pega o nome da branch e traz as coisas dela que nao
 git rebase <NOME_DA_BRANCH> - Se voce estiver na branch feature, ele vai analisar o NOME_DA_BRANCH, e reescrever o commit da branch feature no top da NOME_DA_BRANCH e aplicar na branch feature, organizando assim o historico de commits na branch feature.
 	git rebase --continue - Necessario quando estamos no fluxo de resolucao de conflitos, excecutamos ele para sinalizar para o git que resolvemos o conflito e que ele pode prosseguir reescrevendo o historico de commits.
 	git rebase -i HEAD~4 - Reescreve quatro commits atras de forma iterativa.
+
+git tag - Traz a lista de todas as tags do repositorio atual.
+	git tag l - Faz a mesma coisa que o commando acima
+	git tag l "*17*" - Pesquisa tags que tenha 17 no meio, por exemplo "v17-beta2"
+	git checkout tag - Navega entre as tags, esse commando tambem serve para navegar entre as branches
+
+git diff <NOME_DA_VERSAO_1> <NOME_DA_VERSAO_2> - Procura diferenca entre as duas tags ou release.
+
+git tag <NOME_DA_TAG> - Cria uma tag com o nome especificado, sendo possivel entre escolher lighweight tagging e tagging descritivo.
+
+git tag <NOME_DA_TAG> <NOME_DO_COMMIT> - Taggeia um commit previo, usado quando voce nao quer taggear HEAD (commit atual).
+
+git tag -a <NOME_DA_TAG> -m <MENSAGEM_DA_TAG> - Cria uma tag, com a diferenca do acima de que a criacao dessa tag é considerado uma tag anotada, ou seja, ela contem informacoes, usada muito mais que o commando acima.
+
+git tag -f <NOME_DA_TAG> - Caso voce tenha cometido algum error, ao forcar o -f antes do nome da tag permite recolocar a tag em outro commit se necessário.
+
+git show <NOME_DA_TAG> - Mostra os metadados da tag, geralmente é necessário usar esse commando em vez dos demais caso a tag seja uma tag do tipo anotado.
+
+git push --tags - Por default, o git push nao empurra as tags para o remoto, somente incluido essa flag no final do commando que as tags sao empurradas remotamente.
