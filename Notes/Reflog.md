@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Saturday, August 24th 2024, 11:28:07 pm
-date modified: Saturday, August 24th 2024, 11:38:36 pm
+date modified: Monday, August 26th 2024, 8:24:35 pm
 ---
 O reflog é o historico do historico do git, ele aponta todas as mudancas dentro das branches, cada mudanças aplicadas dentro dela o git mantém.
 
@@ -27,3 +27,7 @@ Os reflogs também expire, isso significa que o git limpa os entries mais antigo
 - **Recuperação de commits:** Se você acidentalmente excluir um commit, o git reflog pode te ajudar a recuperá-lo.
 - **Entendimento da história do projeto:** Ao analisar o git reflog, você pode entender melhor como o projeto evoluiu ao longo do tempo.
 - **Depuração:** Se você estiver tendo problemas com o seu código, o git reflog pode te ajudar a identificar o ponto em que as coisas começaram a dar errado.
+
+---
+
+PS: Se voce executar um git reset --hard, ele ira desfazer o commit e deletar ele da branch, todavia voce ainda tera ele no git reflog, portanto para desfazer o reset basta executar um git reset --hard master@{1}, e assim iremos recuperar o commit "perdido".

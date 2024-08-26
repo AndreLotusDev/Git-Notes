@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Tuesday, August 6th 2024, 11:08:48 am
-date modified: Saturday, August 24th 2024, 11:41:13 pm
+date modified: Monday, August 26th 2024, 8:22:36 pm
 ---
 git branch - lista todas as branches.
 
@@ -15,6 +15,7 @@ git branch -m <actual_branch_name> <new_branch_name> - necessário para quando v
 
 git checkout <branch_name> - navega para uma branch, caso não exista ele cria essa branch a 
 priori, também pode restaurar arquivos.
+	git checkout bugfix@{2.days.ago} - Navega pra branch bugfix com o commit que foi feito a dois dias atrás.
 
 git switch <branch_name> - faz o mesmo que o git checkout em termos de navegação de branches, todavia por set um commando mais moderno veio com o intuito de fazer somente uma coisa em contraste com o checkout que faz várias coisas.
 	git switch - -> volta para a branch anterior que ele estava.
@@ -24,6 +25,7 @@ git switch -c <branch_name> - cria uma branch com o nome especificado e depois d
 git commit -a -m "<commit_message>" - jeito de flow único de commitar já tudo e adicionar uma mensagem.
 
 git diff- analisa os arquivos alterados e mostra a versão previa do HEAD em comparação com a versão atual dos arquivos modificados.
+	git diff main@{0} main@{yesterday} - Compara as diferencas entre a main atual e a main de um dia atrás.
 
 git diff HEAD - mostra a diferença entre todos os arquivos desde o último commit (incluindo arquivos dentro do staging).
 
@@ -62,9 +64,9 @@ git restore --source HEAD~1 app.js - Restora a versão do arquivo para a versão
 git restore --staged <NOME_DO_ARQUIVO> - Move o arquivo do ambiente stage para o ambiente de não comitado. Muito útil para quando você adiciona um arquivo pro stage sem querer, geralmente usamos muito esse commando pela GUI/UI.
 
 git reset <COMMIT> - Ira desfazer o commit, e todos os arquivos tocados por esse commit ficarão em stage para voce modificar ou adicionar em outro commit.
-
-git reset --hard <COMMIT> - Ira desfazer as alterações e descartar os arquivos alterados pelos commits navegados, por exemplo.
+	git reset --hard <COMMIT> - Ira desfazer as alterações e descartar os arquivos alterados pelos commits navegados, por exemplo.
 	git reset --hard HEAD~2 - Irá desfazer os dois commits, navegar para dois commits atrás e ainda descartar todos os arquivos tocados por esses últimos dois commits.
+	git reset --hard master@{1} - Desfaz a delecao de um commit usando reflog.
 
 git remote - Verifica se o projeto local tem link com o remoto.
 
@@ -139,3 +141,4 @@ git cat-file -p master^{tree} - Visualiza como a arvore da main está.
 git reflog - Mostra todos os entries do git reflog.
 	git reflog show HEAD - Mostra todos os entries que tangem ao HEAD.
 	git reflog show main - Mostra todos os entries da branch main.
+	git reflog master@{one.week.ago} - Navega pra uma semana passada e mostra todos os logs inseridos a partir da semana passada.
