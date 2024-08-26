@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Tuesday, August 6th 2024, 11:08:48 am
-date modified: Saturday, August 24th 2024, 2:38:54 pm
+date modified: Saturday, August 24th 2024, 11:41:13 pm
 ---
 git branch - lista todas as branches.
 
@@ -122,3 +122,20 @@ git tag -f <NOME_DA_TAG> - Caso voce tenha cometido algum error, ao forcar o -f 
 git show <NOME_DA_TAG> - Mostra os metadados da tag, geralmente é necessário usar esse commando em vez dos demais caso a tag seja uma tag do tipo anotado.
 
 git push --tags - Por default, o git push nao empurra as tags para o remoto, somente incluido essa flag no final do commando que as tags sao empurradas remotamente.
+
+git hash-object <ARQUIVO> - Hasheia o objeto e retorna um SHA-1 e guarda isso na pasta de objetos.
+	echo 'hello' | git hash-object --stdin - Hasheia a frase hello e joga pro console o resultado final.
+	echot 'hello' | git hash-object --stdin -w -Hasheia a frase hello e joga para o console, todavia o resultado final também é armazenado na pasta objetcts do git.
+
+git cat-file -p <HASH_DO_OBJETO> - Busca o objeto hasheado pelo git e retorna para o usuario final. A flag p indica para printar com pretty o objeto baseado no tipo.
+
+git cat-file -p <HASH_DO_OBJETO> > <OUTRO_ARQUIVO> - Passa a informacao no banco de dados dentro do .gt para outro arquivo com o nome OUTRO_ARQUIVO.
+
+git cat-file -t <HASH_DO_OBJETO> - Fala o tipo do objeto, se ele é um tree ou blob.
+
+git cat-file -p master^{tree} - Visualiza como a arvore da main está.
+	git cat-file -p <BRANCH>^{tree} - Visualiza outra branch se necessário.
+
+git reflog - Mostra todos os entries do git reflog.
+	git reflog show HEAD - Mostra todos os entries que tangem ao HEAD.
+	git reflog show main - Mostra todos os entries da branch main.

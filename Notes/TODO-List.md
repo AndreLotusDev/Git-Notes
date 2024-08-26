@@ -2,7 +2,7 @@
 aliases: 
 tags: 
 date created: Friday, August 9th 2024, 5:58:57 pm
-date modified: Saturday, August 24th 2024, 1:52:43 pm
+date modified: Saturday, August 24th 2024, 11:52:30 pm
 ---
 Essa é uma lista de tarefas para set feita enquanto se estuda GIT
 
@@ -13,5 +13,7 @@ Para se fazer:
 - Estudar fluxos diferentes de trabalho no github (gitflow e etc).
 - Estudar sobre rebase.
 - Realizar um rebase interativo.
+- Usar o git reflog para perder um conteudo perdido ad eternum.
+- Reescrever esse projeto em ingles (EN-US).
 
 Feito:
